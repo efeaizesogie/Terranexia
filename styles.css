@@ -234,6 +234,7 @@ nav ul li a {
 
 .price-card p {
   font-size: 20px;
+  color: #003366;
   margin-bottom: 30px;
 }
 
@@ -269,7 +270,6 @@ nav ul li a {
 #contact-form input,
 #contact-form textarea {
   width: 50%;
-  padding: 10px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -280,15 +280,47 @@ nav ul li a {
   border-radius: 5px;
 }
 
-#contact-form button {
+#contact-form .btn {
   margin: 0 auto;
   background-color: #003366;
   color: #fff;
-  padding: 10px 20px;
+  padding: 20px 30px;
   border: none;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.success {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  margin: 0 auto;
+  background-color: #4caf50;
+  padding: 20px;
+}
+
+.success .good {
+  font-size: 28px;
+  margin-right: 24px;
+  color: #fff;
+  display: inline-block;
+}
+
+.contact .success-msg {
+  margin: 0;
+  color: #fff;
+}
+
+.successMessage {
+  display: flex;
 }
 
 /* Footer */
@@ -307,6 +339,10 @@ nav ul li a {
 @media screen and (max-width: 768px) {
   .container {
     padding: 10px;
+  }
+
+  .sec-heading {
+    font-size: 24px;
   }
 
   nav ul {
@@ -331,12 +367,8 @@ nav ul li a {
     margin-bottom: 10px;
   }
 
-  .hero {
-    padding: 60px 0;
-  }
-
   .hero h1 {
-    font-size: 28px;
+    font-size: 25px;
   }
 
   .hero p {
@@ -361,6 +393,10 @@ nav ul li a {
 
   .feature p {
     font-size: 16px;
+  }
+
+  .about p {
+    width: 90%;
   }
 
   .pricing {

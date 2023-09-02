@@ -1,8 +1,27 @@
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
+window.onload = function () {
+  var contactForm = document.getElementById("contact-form");
+
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    this.contact_number.value = (Math.random() * 100000) | 0;
+
+    emailjs.sendForm("service_bro9vyj", "template_zgroj47", this).then(
+      function () {
+        console.log("SUCCESS!");
+        contactForm.reset();
+        var successMessage = document.querySelector(".success");
+        successMessage.classList.add("successMessage");
+
+        setTimeout(() => {
+          successMessage.classList.remove("successMessage");
+        }, 3000);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
   });
+};
 
 const priceCards = document.querySelectorAll(".price-card");
 
@@ -41,3 +60,7 @@ var navLinks = document.querySelector(".nav-links");
 function displayMenu() {
   navLinks.classList.toggle("active");
 }
+
+(function () {
+  emailjs.init("fybEhFmbjU3EgPVVT");
+})();

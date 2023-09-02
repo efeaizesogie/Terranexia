@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
 
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
     <title>TerraNexia</title>
   </head>
   <body>
@@ -120,11 +125,33 @@
         <h2 class="sec-heading">Contact Us</h2>
         <p>Have questions or need more information? Reach out to us!</p>
         <form id="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
+          <input type="hidden" name="contact_number" />
+          <input
+            type="text"
+            placeholder="Your Name"
+            name="user_name"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            name="user_email"
+            required
+          />
+          <textarea
+            placeholder="Your Message"
+            name="message"
+            required
+          ></textarea>
+          <input type="submit" class="btn" value="Send Message" />
         </form>
+      </div>
+
+      <div class="success">
+        <div class="success-box">
+          <i class="fas fa-check-circle good"></i>
+          <p class="success-msg">Message sent successfully!</p>
+        </div>
       </div>
     </section>
 
