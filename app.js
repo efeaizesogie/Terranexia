@@ -36,9 +36,8 @@ priceCards.forEach((card, index) => {
 });
 
 var navMenu = document.querySelector(".menu");
-var navLinks = document.querySelectorAll(".nav-links");
+var navLinks = document.querySelector(".nav-links");
 
-navMenu.addEventListener("click", () => {
-  navLinks.ClassList.toggle("active");
-  console.log("clicked");
-});
+function displayMenu() {
+  navLinks.classList.toggle("active");
+}
