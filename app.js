@@ -34,3 +34,11 @@ priceCards.forEach((card, index) => {
     }
   });
 });
+
+var navMenu = document.querySelector(".menu");
+var navLinks = document.querySelectorAll(".nav-links");
+
+navMenu.addEventListener("click", () => {
+  navLinks.ClassList.toggle("active");
+  console.log("clicked");
+});
